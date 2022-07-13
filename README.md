@@ -1,0 +1,2 @@
+# test
+naga info
