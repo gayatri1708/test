@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('listCovidCases');
 });
+
+Route::get('covid/state/list', 'CovidCaseController@listStateCases');
+Route::get('covid/district/list/{state}', 'CovidCaseController@listDistrictCases');
+Route::get('covid/state/fetchData', 'CovidCaseController@fetchStateCases');
+Route::get('covid/district/fetchData/{state}', 'CovidCaseController@fetchDistrictCases');
